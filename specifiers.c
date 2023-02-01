@@ -1,5 +1,8 @@
 #include "main.h"
 
+int _strlen(char *str);
+int print_char(va_list args);
+int print_str(va_list args);
 /**
   * _strlen - finds length of the string passed to the function.
   * @str: the string passed to the function.

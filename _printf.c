@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0, j, char_len = 0, len = 0;
-	specifier_t specifiers [] = {
+	pr_t specifiers [] = {
 		{"c", print_char},
 		{"s", print_str}
 	};
@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 				j = 0;
 
 				while (j < 2 && (*(format + i) !=
-					*(specifiers[j].specifier)))
+					*(specifiers[j].sp)))
 					j++;
 
 				if (j < 2)

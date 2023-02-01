@@ -4,11 +4,17 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-typedef struct specifier
+/**
+  * struct pr - struct pr.
+  *
+  * @sp: the specifier.
+  * @f: the function associated.
+  */
+typedef struct pr
 {
-	char *specifier;
+	char *sp;
 	int (*f)(va_list args);
-}specifier_t;
+}pr_t;
 
 int _printf(const char *format, ...);
 int _strlen(char *str);
