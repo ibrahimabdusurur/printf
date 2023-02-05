@@ -20,6 +20,9 @@ int _printf(const char *format, ...)
 		{"s", print_str}
 	};
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 
 	while (*(format + i))
